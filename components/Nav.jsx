@@ -22,13 +22,13 @@ const Nav = () => {
         await signOut();
         
     }
-    window.addEventListener("scroll",()=>{
-      if(window.scrollY>10){
-        setScroll(true);
-      }else{
-        setScroll(false);
-      }
-    });
+    // window.addEventListener("scroll",()=>{
+    //   if(window.scrollY>10){
+    //     setScroll(true);
+    //   }else{
+    //     setScroll(false);
+    //   }
+    // });
   return (
     <header  className={`  transition  duration-500 w-full fixed py-4 flex ${isScoll?'bg-white border-b-black border-b-0 shadow-xl':'bg-transparent'} z-50 justify-center items-center`}>
     <nav className=' w-11/12    py-4 flex justify-between'>
