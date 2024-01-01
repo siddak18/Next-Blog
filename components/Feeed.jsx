@@ -11,6 +11,7 @@ const Feeed = () => {
       const ch=  async()=>{
            const res=await fetch('/api/blog/',{
             method:"GET",
+            cache:"no-store"
             })
             const data=await res.json();
           
@@ -26,7 +27,8 @@ const Feeed = () => {
         method:'DELETE',
         body:JSON.stringify({
           postid:itemid
-        })
+        }),
+        cache:"no-store"
      })
      if(res.ok){
       const updatedposts= post.filter((item)=>item._id!=itemid);

@@ -25,6 +25,6 @@ import { model,models,Schema } from "mongoose";
  });
 
 
- const blog=models.Blogg||model("Blogg",blogschema);
+ const blog=models.Blogfinal||model("Blogfinal",blogschema);
 
  export default blog

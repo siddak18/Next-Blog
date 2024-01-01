@@ -20,7 +20,8 @@ const page = () => {
                   userid:session?.user.id,
                   username:session?.user.name,
                   image:session?.user.image
-                })
+                }),
+                cache:"no-store"
              })
 
              if(res.status==201){
@@ -33,7 +34,7 @@ const page = () => {
     }
   return (
     
-    <div className='w-full flex flex-col justify-center items-center'>
+    <div className='w-full flex flex-col justify-center items-center mt-20'>
         { session?.user?
         (<Form
         type="create"

@@ -10,11 +10,10 @@ const page = () => {
       const ch=  async()=>{
            const res=await fetch('/api/blog/',{
             method:"GET",
+            cache:"no-store"
             })
             const data=await res.json();
-         
           setpost(data);
-          
         }
       ch();
   },[]);
@@ -38,7 +37,7 @@ const page = () => {
     }
   }
   return (
-    <section className='flex flex-col w-full items-center'>
+    <section className='flex flex-col w-full items-center mt-20'>
     <div className="w-11/12  par-grid-change">
       { 
         post.map((item,idx)=>{

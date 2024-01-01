@@ -1,3 +1,4 @@
+"use client"
 import Feeed from '@components/Feeed'
 import '../Styles/globals.css'
 
