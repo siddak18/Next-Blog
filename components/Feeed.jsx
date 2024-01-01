@@ -10,8 +10,7 @@ const Feeed = () => {
   useEffect(()=>{
       const ch=  async()=>{
            const res=await fetch('/api/blog/',{
-            method:"GET",
-            cache:"no-store"
+            method:"GET"
             })
             const data=await res.json();
           
@@ -28,7 +27,7 @@ const Feeed = () => {
         body:JSON.stringify({
           postid:itemid
         }),
-        cache:"no-store"
+        cache:"no-cache"
      })
      if(res.ok){
       const updatedposts= post.filter((item)=>item._id!=itemid);
